@@ -1,10 +1,9 @@
 body {
-    /* background-image: linear-gradient(to bottom,#8ECAE6 50%, azure 50%); */
-    background-image: linear-gradient(to bottom, #8ECAE6 50%, azure 50%);
-    background-image: -o-linear-gradient(bottom, #8ECAE6 50%, azure 50%);
-    background-image: -moz-linear-gradient(bottom, #8ECAE6 50%, azure 50%);
-    background-image: -webkit-linear-gradient(bottom, #8ECAE6 50%, azure 50%);
-    background-image: -ms-linear-gradient(bottom, #8ECAE6 50%, azure 50%);
+    background-image: linear-gradient(to bottom, azure 50%, #8ECAE6 50%);
+    background-image: -o-linear-gradient(bottom, azure 50%, #8ECAE6 50%);
+    background-image: -moz-linear-gradient(bottom, azure 50%, #8ECAE6 50%);
+    background-image: -webkit-linear-gradient(bottom, azure 50%, #8ECAE6 50%);
+    background-image: -ms-linear-gradient(bottom, azure 50%, #8ECAE6 50%);
     margin: 0;
 }
 
