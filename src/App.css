@@ -92,9 +92,11 @@ select {
     color: white;
     border-radius: 25px;
     font-size: 1.1em;
+    font-weight: 500;
     cursor: pointer;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
+
 p,
 h2 {
     padding: 10px;
