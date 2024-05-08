@@ -28,15 +28,15 @@ export default function Question({ question }) {
 
     return (
     <div className="card">
-        <h2>{question.category}</h2>
-        <p>{question.question.replace(/&quot;|&#039;/g, "'")}</p>
+        <h2>{question.category.replace(/&amp;/g, '&')}</h2>
+        <p>{question.question.replace(/&quot;|&#039;/g, "'").replace(/&amp;/g, '&')}</p>
         <p>{answer}</p>
         <Link to="/form">
             <button className="play__button" style={{display:correctShow}}>Get New Question</button>
         </Link>
         <p style={{display:display}}>{correct}</p>
-            <button className="play__button" style={{display:wrongShow}}>Try Again!</button>
-        {choices.map((choice,i) => <input style={{display:hide}} className="answer__choices" type="button" key={i} onClick={handleClick} value={choice} />)}
+            <span style={{display:wrongShow}}>Try Again!</span>
+        {choices.map((choice,i) => <input style={{display:hide}} className="answer__choices" type="button" key={i} onClick={handleClick} value={choice.replace(/&amp;/g, '&')} />)}
     </div>
     )
 }
