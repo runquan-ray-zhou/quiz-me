@@ -36,7 +36,7 @@ export default function Question({ question }) {
         </Link>
         <p style={{display:display}}>{correct}</p>
             <span style={{display:wrongShow}}>Try Again!</span>
-        {choices.map((choice,i) => <input style={{display:hide}} className="answer__choices" type="button" key={i} onClick={handleClick} value={choice.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#39;/g, "'")} />)}
+        {choices.map((choice,i) => <input style={{display:hide}} className="answer__choices" type="button" key={i} onClick={handleClick} value={choice.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#039;/g, "'").replace(/&#39;/g, "'")} />)}
     </div>
     )
 }
