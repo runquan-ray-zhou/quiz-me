@@ -1,0 +1,85 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    background-color: azure;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #8ECAE6;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border-top: 1px solid lightgray;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+}
+
+.play__button {
+    border: none;
+    background: black;
+    padding: 15px 60px 15px 60px;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-bottom: 20px
+}
+
+button {
+    margin-top: 20px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 15px 60px 15px 60px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+select {
+    margin: 15px;
+}
+.questions {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.answer__choices {
+    margin-top: 20px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 15px 60px 15px 60px;
+    border-radius: 25px;
+    cursor: pointer;
+}
