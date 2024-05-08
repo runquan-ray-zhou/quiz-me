@@ -1,7 +1,8 @@
 body {
-    background-color: #8ECAE6;
+    background-image: linear-gradient(#8ECAE6, azure);
     margin: 0;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -13,6 +14,7 @@ main {
     padding: 0;
     background-color: azure;
 }
+
 header {
     display: flex;
     align-items: center;
@@ -87,4 +89,8 @@ select {
     font-size: 1.1em;
     cursor: pointer;
     margin-bottom: 20px
+}
+p,
+h2 {
+    padding: 10px;
 }
