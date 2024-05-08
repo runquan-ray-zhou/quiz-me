@@ -83,3 +83,13 @@ select {
     border-radius: 25px;
     cursor: pointer;
 }
+.getQuestion {
+    border: none;
+    background: black;
+    padding: 15px 60px 15px 60px;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-bottom: 20px
+}
