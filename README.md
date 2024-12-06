@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-**Trivia Master** is a web application that provides users with an engaging and interactive platform to test their knowledge across various topics and difficulty levels. Using the Open Trivia Database (OpenTDB) API, the app generates trivia questions in different formats, including multiple-choice and true/false, ensuring a fun and challenging experience for users of all ages.
+**QuizMe** is a web application that provides users with an engaging and interactive platform to test their knowledge across various topics and difficulty levels. Using the Open Trivia Database (OpenTDB) API, the app generates trivia questions in different formats, including multiple-choice and true/false, ensuring a fun and challenging experience for users of all ages.
 
 ## Technology Utilized
 
