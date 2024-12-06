@@ -38,9 +38,7 @@ The application leverages several key technologies to deliver a smooth and engag
 
 ## Contact
 
-**Runquan Ray Zhou**  
-[LinkedIn](https://www.linkedin.com/in/runquanrayzhou/)  
-rzhou@pursuit.org  
+Runquan Ray Zhou - [LinkedIn](https://www.linkedin.com/in/runquanrayzhou/) - rzhou@pursuit.org
 
-Project Live Link: [[https://trivia-master.netlify.app/](https://quiz-me-trivia-app.netlify.app/)
+Project Live Link: [https://trivia-master.netlify.app/](https://quiz-me-trivia-app.netlify.app/)
 
