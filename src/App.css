@@ -1,111 +1,111 @@
 body {
-    background-image: linear-gradient(to bottom, azure 50%, azure 50%);
-    background-image: -o-linear-gradient(bottom, azure 50%, azure 50%);
-    background-image: -moz-linear-gradient(bottom, azure 50%, azure 50%);
-    background-image: -webkit-linear-gradient(bottom, azure 50%, azure 50%);
-    background-image: -ms-linear-gradient(bottom, azure 50%, azure 50%);
-    margin: 0;
-    /* #8ECAE6 */
+  background-image: linear-gradient(to bottom, azure 50%, azure 50%);
+  background-image: -o-linear-gradient(bottom, azure 50%, azure 50%);
+  background-image: -moz-linear-gradient(bottom, azure 50%, azure 50%);
+  background-image: -webkit-linear-gradient(bottom, azure 50%, azure 50%);
+  background-image: -ms-linear-gradient(bottom, azure 50%, azure 50%);
+  margin: 0;
+  /* #8ECAE6 */
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: azure;
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    background-color: #8ECAE6;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: #8ecae6;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
 }
 form {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .play__button {
-    border: none;
-    background: black;
-    padding: 15px 60px 15px 60px;
-    color: white;
-    border-radius: 25px;
-    font-size: 1.2em;
-    cursor: pointer;
-    margin-bottom: 20px;
+  border: none;
+  background: black;
+  padding: 15px 60px 15px 60px;
+  color: white;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 button {
-    margin-top: 20px;
-    border: 1px solid black;
-    background: transparent;
-    padding: 15px 60px 15px 60px;
-    border-radius: 25px;
-    font-size: 1.2em;
-    cursor: pointer;
+  margin-top: 20px;
+  border: 1px solid black;
+  background: transparent;
+  padding: 15px 60px 15px 60px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 select {
-    margin: 15px;
+  margin: 15px;
 }
 .questions {
-    font-size: 1.5em;
-    font-weight: 900;
+  font-size: 1.5em;
+  font-weight: 900;
 }
-.card{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.card {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .answer__choices {
-    margin-top: 20px;
-    border: 1px solid black;
-    background: transparent;
-    padding: 15px 50px 15px 50px;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
+  margin-top: 20px;
+  border: 1px solid black;
+  background: transparent;
+  padding: 15px 50px 15px 50px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
 }
 .getQuestion {
-    border: none;
-    background: black;
-    padding: 15px 60px 15px 60px;
-    color: white;
-    border-radius: 25px;
-    font-size: 1.1em;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 20px;
+  border: none;
+  background: black;
+  padding: 15px 60px 15px 60px;
+  color: white;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 p,
 h2 {
-    padding: 10px;
+  padding: 10px;
 }
 iframe {
-    position: absolute;
-    top: 5%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
