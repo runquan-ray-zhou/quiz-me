@@ -21,7 +21,10 @@ export default function Question({ question }) {
       setHide("none");
       setDisplay("block");
     } else {
-      e.target.style.color = "red";
+      e.target.style.color = "white";
+      e.target.style.background = "red";
+      e.target.style.font = "bold";
+      e.target.style.border = "none";
       setAnswer("You Are Wrong!");
       setWrongShow("block");
     }
@@ -35,16 +38,36 @@ export default function Question({ question }) {
 
   return (
     <div className="card">
-      <h2>{decodeHtmlEntities(question.category)}</h2>
-      <p>{decodeHtmlEntities(question.question)}</p>
-      <p>{answer}</p>
+      <p
+        style={{
+          fontWeight: "bold",
+          fontSize: "1.4em",
+          margin: "10px 0px 0px 0px",
+        }}
+      >
+        {decodeHtmlEntities(question.category)}
+      </p>
+      <p style={{ fontSize: "1.2em", margin: "10px 0px 0px 0px" }}>
+        {decodeHtmlEntities(question.question)}
+      </p>
+      <p style={{ fontSize: "1.2em", margin: "10px 0px 0px 0px" }}>{answer}</p>
+      <p className="answer" style={{ display: display }}>
+        {decodeHtmlEntities(correct)}
+      </p>
       <Link to="/form">
         <button className="play__button" style={{ display: correctShow }}>
           Get New Question
         </button>
       </Link>
-      <p style={{ display: display }}>{decodeHtmlEntities(correct)}</p>
-      <span style={{ display: wrongShow }}>Try Again!</span>
+      <p
+        style={{
+          display: wrongShow,
+          fontSize: "1.2em",
+          margin: "10px 0px 30px 0px",
+        }}
+      >
+        Try Again!
+      </p>
       {choices.map((choice, i) => (
         <input
           style={{ display: hide }}

@@ -35,16 +35,15 @@ header {
   height: 50px;
 }
 form {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .play__button {
   border: none;
   background: black;
-  padding: 15px 60px 15px 60px;
+  padding: 15px 20px 15px 20px;
   color: white;
   border-radius: 25px;
-  font-size: 1.2em;
   cursor: pointer;
   margin-bottom: 20px;
 }
@@ -55,20 +54,18 @@ button {
   background: transparent;
   padding: 15px 60px 15px 60px;
   border-radius: 25px;
-  font-size: 1.2em;
+  font-size: clamp(0.95em, 1vw + 0.125em, 1em);
   cursor: pointer;
 }
 
 select {
-  margin: 15px;
+  margin: 20px;
 }
 .questions {
-  font-size: 1.5em;
-  font-weight: 900;
+  font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
 .card {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,23 +73,35 @@ select {
   text-align: center;
 }
 
-.answer__choices {
+.answer {
+  color: white;
+  width: auto;
   margin-top: 20px;
-  border: 1px solid black;
-  background: transparent;
-  padding: 15px 50px 15px 50px;
+  border: 1px solid green;
+  background: green;
+  padding: 15px 20px 15px 20px;
   border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
+  font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
+
+.answer__choices {
+  width: auto;
+  margin: 0px 0px 30px 0px;
+  border: 1.5px solid lightgray;
+  background: transparent;
+  padding: 15px 20px 15px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: clamp(0.95em, 1vw + 0.125em, 1em);
+}
+
 .getQuestion {
   border: none;
   background: black;
   padding: 15px 60px 15px 60px;
   color: white;
   border-radius: 25px;
-  font-size: 1.1em;
-  font-weight: 500;
+  font-size: clamp(0.95em, 1vw + 0.125em, 1em);
   cursor: pointer;
   margin-bottom: 20px;
 }
