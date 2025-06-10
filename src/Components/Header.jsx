@@ -7,7 +7,7 @@ export default function Header() {
         <span>Home Page</span>
       </Link>
       <Link to="/about">
-        <span>About Me</span>
+        <span>About</span>
       </Link>
     </header>
   );
