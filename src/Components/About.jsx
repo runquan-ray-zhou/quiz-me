@@ -10,6 +10,13 @@ export default function About() {
         <a
           target="_blank"
           rel="noopener noreferrer"
+          href="https://github.com/runquan-ray-zhou/quiz-me"
+        >
+          <i className="fa-solid fa-code"></i>
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
           href="mailto:rzhou@pursuit.org"
         >
           <i className="fa-regular fa-envelope"></i>
@@ -27,13 +34,6 @@ export default function About() {
           href="https://www.linkedin.com/in/runquanrayzhou/"
         >
           <i className="fa-brands fa-linkedin"></i>
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/runquan-ray-zhou/quiz-me"
-        >
-          <i className="fa-solid fa-code"></i>
         </a>
       </div>
       <p>All Rights Reserved 2025</p>

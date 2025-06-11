@@ -3,38 +3,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
 }
 
 /* Main title */
 .login span {
   position: absolute;
-  top: 175px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 4em;
+  font-size: clamp(2.5em, 8vw, 4em);
   font-weight: 900;
   text-align: center;
   -webkit-text-stroke: 1.7px black;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 /* WiFi icon */
 .fa-solid {
-  font-size: 280px;
+  font-size: clamp(180px, 25vw, 280px);
   color: #1d3557;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Concentric circles */
 .circle {
-  width: 300px;
-  height: 300px;
+  width: clamp(250px, 35vw, 300px);
+  height: clamp(250px, 35vw, 300px);
   background-color: black;
   border-radius: 50%;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .circle1 {
-  width: 290px;
-  height: 290px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   background-color: #8ecae6;
   border-radius: 50%;
   position: absolute;
@@ -46,8 +59,8 @@
 }
 
 .circle2 {
-  width: 280px;
-  height: 280px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   background-color: black;
   border-radius: 50%;
   position: absolute;
@@ -59,8 +72,8 @@
 }
 
 .circle3 {
-  width: 270px;
-  height: 270px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   background-color: #8ecae6;
   border-radius: 50%;
   position: absolute;
@@ -69,6 +82,9 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Login button container */
@@ -76,10 +92,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
   padding: 5px;
   background-color: white;
   border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* Edition label */
@@ -87,23 +104,62 @@
   padding: 10px 15px;
   background-color: black;
   border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .edition p {
   margin: 0;
-  font-size: 2em;
+  font-size: clamp(1.2em, 4vw, 2em);
   color: white;
+  text-align: center;
 }
 
 /* Enter button */
 .login-button {
   width: 100%;
   margin-top: 5px;
-  padding: 10px 61px;
-  font-size: 2em;
+  padding: 15px 20px;
+  font-size: clamp(1.2em, 4vw, 2em);
   background-color: #1d3557;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .login {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .circle {
+    margin-bottom: 30px;
+  }
+
+  .login span {
+    -webkit-text-stroke: 1px black;
+  }
+
+  .login-button {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .circle {
+    margin-bottom: 20px;
+  }
+
+  .login-button__container {
+    max-width: 280px;
+  }
 }
