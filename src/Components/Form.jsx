@@ -19,30 +19,30 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           <br />
           <select className="category" name="category" id="category">
             <option value="">Any Category</option>
-            <option value="&category=9">General Knowledge</option>
-            <option value="&category=10">Books</option>
-            <option value="&category=29">Comics</option>
-            <option value="&category=11">Film</option>
-            <option value="&category=12">Music</option>
-            <option value="&category=13">Musical & Theatres</option>
-            <option value="&category=14">Television</option>
-            <option value="&category=15">Video Games</option>
-            <option value="&category=16">Board Games</option>
-            <option value="&category=31">Anime & Manga</option>
-            <option value="&category=32">Cartoon & Animations</option>
-            <option value="&category=17">Science & Nature</option>
-            <option value="&category=18">Computers</option>
-            <option value="&category=30">Gadgets</option>
-            <option value="&category=19">Mathematics</option>
-            <option value="&category=20">Mythology</option>
-            <option value="&category=21">Sports</option>
-            <option value="&category=22">Geography</option>
-            <option value="&category=23">History</option>
-            <option value="&category=24">Politics</option>
-            <option value="&category=25">Art</option>
-            <option value="&category=26">Celebrities</option>
-            <option value="&category=27">Animals</option>
-            <option value="&category=28">Vehicles</option>
+            <option value="9">General Knowledge</option>
+            <option value="10">Books</option>
+            <option value="29">Comics</option>
+            <option value="11">Film</option>
+            <option value="12">Music</option>
+            <option value="13">Musical & Theatres</option>
+            <option value="14">Television</option>
+            <option value="15">Video Games</option>
+            <option value="16">Board Games</option>
+            <option value="31">Anime & Manga</option>
+            <option value="32">Cartoon & Animations</option>
+            <option value="17">Science & Nature</option>
+            <option value="18">Computers</option>
+            <option value="30">Gadgets</option>
+            <option value="19">Mathematics</option>
+            <option value="20">Mythology</option>
+            <option value="21">Sports</option>
+            <option value="22">Geography</option>
+            <option value="23">History</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
           </select>
         </label>
         <br />
@@ -51,9 +51,9 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           <br />
           <select className="difficulty" name="difficulty" id="difficulty">
             <option value="">Any Difficulty</option>
-            <option value="&difficulty=easy">Easy</option>
-            <option value="&difficulty=medium">Medium</option>
-            <option value="&difficulty=hard">Hard</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
           </select>
         </label>
         <br />
@@ -62,8 +62,8 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           <br />
           <select className="type" name="type" id="type">
             <option value="">Any Type</option>
-            <option value="&type=multiple">Multiple Choice</option>
-            <option value="&type=boolean">True / False</option>
+            <option value="multiple">Multiple Choice</option>
+            <option value="boolean">True / False</option>
           </select>
         </label>
         <br />

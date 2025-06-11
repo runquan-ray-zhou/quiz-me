@@ -1,13 +1,10 @@
 import "./About.css";
+import selfPortrait from "../assets/GhibliSelfPortrait.png";
 
 export default function About() {
   return (
     <div className="About">
-      <img
-        className="About__img"
-        src="https://avatars.githubusercontent.com/u/151119924?v=4"
-        alt="self portrait"
-      />
+      <img className="About__img" src={selfPortrait} alt="self portrait" />
       <p>Quiz Me By: Runquan (Ray) Zhou</p>
       <div className="About__icons">
         <a

@@ -1,20 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import HomePage from "./Components/HomePage";
+import Login from "./Components/Login";
 import Form from "./Components/Form";
 import TriviaGame from "./Components/TriviaGame";
 import Header from "./Components/Header";
 import About from "./Components/About";
 import "./App.css";
 
-const BASE_URL = "https://opentdb.com/api.php?amount=1";
-
 function App() {
   const [triviaCategory, setCategory] = useState("");
   const [triviaDifficulty, setDifficulty] = useState("");
   const [triviaType, setType] = useState("");
 
-  const url = BASE_URL + triviaCategory + triviaDifficulty + triviaType;
+  const BASE_URL = `https://opentdb.com/api.php?amount=1&category=${triviaCategory}&difficulty=${triviaDifficulty}&type=${triviaType}`;
 
   return (
     <div className="App.css">
@@ -22,7 +20,7 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Login />} />
             <Route path="/about" element={<About />} />
             <Route
               path="/form"
@@ -34,7 +32,7 @@ function App() {
                 />
               }
             />
-            <Route path="/triviagame" element={<TriviaGame url={url} />} />
+            <Route path="/triviagame" element={<TriviaGame url={BASE_URL} />} />
           </Routes>
         </Router>
       </main>

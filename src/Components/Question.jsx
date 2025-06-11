@@ -25,7 +25,7 @@ export default function Question({ question }) {
       e.target.style.background = "red";
       e.target.style.font = "bold";
       e.target.style.border = "none";
-      setAnswer("You Are Wrong!");
+      setAnswer("Try Again!");
       setWrongShow("block");
     }
   }
@@ -76,15 +76,6 @@ export default function Question({ question }) {
           Get New Question
         </button>
       </Link>
-      <p
-        style={{
-          display: wrongShow,
-          fontSize: "0.95em",
-          margin: "10px 0px",
-        }}
-      >
-        Try Again!
-      </p>
     </div>
   );
 }

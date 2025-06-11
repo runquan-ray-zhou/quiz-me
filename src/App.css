@@ -8,9 +8,6 @@ body {
   /* #8ECAE6 */
 }
 
-.HomePage {
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -60,11 +57,13 @@ button {
 select {
   margin: 20px;
 }
+
 .questions {
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
+
 .Question,
-.HomePage,
+.login,
 .Form {
   margin: 60px 10px;
   display: flex;
@@ -114,13 +113,14 @@ select {
   border-radius: 25px;
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
   cursor: pointer;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 p,
 h2 {
   padding: 15px 0px;
 }
+
 iframe {
   position: absolute;
   top: 5%;
