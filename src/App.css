@@ -64,7 +64,6 @@ select {
 }
 
 .Question,
-.login,
 .Form {
   margin: 60px 10px;
   display: flex;

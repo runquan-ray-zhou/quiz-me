@@ -14,11 +14,9 @@ export default function Login() {
         </div>
       </div>
       <span>Quiz-Me</span>
-      <div className="login-button__container">
-        <Link to="/form">
-          <button className="login-button">PLAY</button>
-        </Link>
-      </div>
+      <Link to="/form">
+        <button className="login-button">PLAY</button>
+      </Link>
     </div>
   );
 }
