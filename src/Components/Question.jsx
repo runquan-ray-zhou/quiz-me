@@ -36,6 +36,13 @@ export default function Question({ question }) {
     return textarea.value;
   }
 
+  function formatCategory(category) {
+    if (category.includes(":")) {
+      return category.split(": ")[1];
+    }
+    return category;
+  }
+
   return (
     <div className="card">
       <p
@@ -45,7 +52,7 @@ export default function Question({ question }) {
           margin: "10px 0px 0px 0px",
         }}
       >
-        {decodeHtmlEntities(question.category)}
+        {formatCategory(decodeHtmlEntities(question.category))}
       </p>
       <p style={{ fontSize: "1.2em", margin: "10px 0px 0px 0px" }}>
         {decodeHtmlEntities(question.question)}

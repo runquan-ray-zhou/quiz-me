@@ -79,27 +79,36 @@ select {
   margin-top: 20px;
   border: 1px solid green;
   background: green;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px;
   border-radius: 25px;
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
 
 .answer__choices {
+  text-wrap: auto;
   display: block;
   width: auto;
   margin: 0px 0px 30px 0px;
   border: 1.5px solid lightgray;
   background: transparent;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 20px;
   border-radius: 25px;
   cursor: pointer;
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
 
+.getButtons {
+  display: flex;
+  flex-direction: column;
+}
+
 .getQuestion {
+  padding: 15px 20px;
+  width: auto;
+  align-self: center;
+  text-align: center;
   border: none;
   background: black;
-  padding: 15px 60px 15px 60px;
   color: white;
   border-radius: 25px;
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);

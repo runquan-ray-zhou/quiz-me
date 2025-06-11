@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import "./Form.css";
 
 export default function Form({ setCategory, setDifficulty, setType }) {
   const navigate = useNavigate();
@@ -21,26 +20,20 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           <select className="category" name="category" id="category">
             <option value="">Any Category</option>
             <option value="&category=9">General Knowledge</option>
-            <option value="&category=10">Entertainment: Books</option>
-            <option value="&category=29">Entertainment: Comics</option>
-            <option value="&category=11">Entertainment: Film</option>
-            <option value="&category=12">Entertainment: Music</option>
-            <option value="&category=13">
-              Entertainment: Musical & Theatres
-            </option>
-            <option value="&category=14">Entertainment: Television</option>
-            <option value="&category=15">Entertainment: Video Games</option>
-            <option value="&category=16">Entertainment: Board Games</option>
-            <option value="&category=31">
-              Entertainment: Japanese Anime & Manga
-            </option>
-            <option value="&category=32">
-              Entertainment: Cartoon & Animations
-            </option>
+            <option value="&category=10">Books</option>
+            <option value="&category=29">Comics</option>
+            <option value="&category=11">Film</option>
+            <option value="&category=12">Music</option>
+            <option value="&category=13">Musical & Theatres</option>
+            <option value="&category=14">Television</option>
+            <option value="&category=15">Video Games</option>
+            <option value="&category=16">Board Games</option>
+            <option value="&category=31">Anime & Manga</option>
+            <option value="&category=32">Cartoon & Animations</option>
             <option value="&category=17">Science & Nature</option>
-            <option value="&category=18">Science: Computers</option>
-            <option value="&category=30">Science: Gadgets</option>
-            <option value="&category=19">Science: Mathematics</option>
+            <option value="&category=18">Computers</option>
+            <option value="&category=30">Gadgets</option>
+            <option value="&category=19">Mathematics</option>
             <option value="&category=20">Mythology</option>
             <option value="&category=21">Sports</option>
             <option value="&category=22">Geography</option>
@@ -74,7 +67,7 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           </select>
         </label>
         <br />
-        <div>
+        <div className="getButtons">
           <button className="getQuestion" type="submit">
             Get Question
           </button>
