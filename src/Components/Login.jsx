@@ -15,9 +15,6 @@ export default function Login() {
       </div>
       <span>Quiz-Me</span>
       <div className="login-button__container">
-        <div className="edition">
-          <p>2025 EDITION</p>
-        </div>
         <Link to="/form">
           <button className="login-button">PLAY</button>
         </Link>
