@@ -44,36 +44,21 @@ export default function Question({ question }) {
   }
 
   return (
-    <div className="card">
+    <div className="Question">
       <p
         style={{
           fontWeight: "bold",
           fontSize: "1.4em",
-          margin: "10px 0px 0px 0px",
+          margin: "10px 0px",
         }}
       >
         {formatCategory(decodeHtmlEntities(question.category))}
       </p>
-      <p style={{ fontSize: "1.2em", margin: "10px 0px 0px 0px" }}>
+      <p style={{ fontSize: "0.95em", margin: "10px 0px" }}>
         {decodeHtmlEntities(question.question)}
       </p>
-      <p style={{ fontSize: "1.2em", margin: "10px 0px 0px 0px" }}>{answer}</p>
       <p className="answer" style={{ display: display }}>
         {decodeHtmlEntities(correct)}
-      </p>
-      <Link to="/form">
-        <button className="play__button" style={{ display: correctShow }}>
-          Get New Question
-        </button>
-      </Link>
-      <p
-        style={{
-          display: wrongShow,
-          fontSize: "1.2em",
-          margin: "10px 0px 30px 0px",
-        }}
-      >
-        Try Again!
       </p>
       {choices.map((choice, i) => (
         <input
@@ -85,6 +70,21 @@ export default function Question({ question }) {
           value={decodeHtmlEntities(choice)}
         />
       ))}
+      <p style={{ fontSize: "0.95em", margin: "10px 0px" }}>{answer}</p>
+      <Link to="/form">
+        <button className="play__button" style={{ display: correctShow }}>
+          Get New Question
+        </button>
+      </Link>
+      <p
+        style={{
+          display: wrongShow,
+          fontSize: "0.95em",
+          margin: "10px 0px",
+        }}
+      >
+        Try Again!
+      </p>
     </div>
   );
 }
