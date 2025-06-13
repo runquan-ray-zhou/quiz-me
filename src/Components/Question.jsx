@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-export default function Question({ question }) {
+export default function Question({ question, setCount, count }) {
   const [answer, setAnswer] = useState("");
   const [correctShow, setCorrectShow] = useState("none");
   const [wrongShow, setWrongShow] = useState("none");
@@ -20,6 +20,7 @@ export default function Question({ question }) {
       setWrongShow("none");
       setHide("none");
       setDisplay("block");
+      setCount(count + 1);
     } else {
       e.target.style.color = "white";
       e.target.style.background = "red";
@@ -27,6 +28,7 @@ export default function Question({ question }) {
       e.target.style.border = "none";
       setAnswer("Try Again!");
       setWrongShow("block");
+      setCount(0);
     }
   }
 
@@ -45,34 +47,31 @@ export default function Question({ question }) {
 
   return (
     <div className="Question">
-      <p
-        style={{
-          fontWeight: "bold",
-          fontSize: "1.4em",
-          margin: "10px 0px",
-        }}
-      >
+      <p className="Question__category">
         {formatCategory(decodeHtmlEntities(question.category))}
       </p>
-      <p style={{ fontSize: "0.95em", margin: "10px 0px" }}>
+      <p className="Question__question">
         {decodeHtmlEntities(question.question)}
       </p>
-      <p className="answer" style={{ display: display }}>
+      <p className="Question__correct-answer" style={{ display: display }}>
         {decodeHtmlEntities(correct)}
       </p>
       {choices.map((choice, i) => (
         <input
           style={{ display: hide }}
-          className="answer__choices"
+          className="Question__answer-choices"
           type="button"
           key={i}
           onClick={handleClick}
           value={decodeHtmlEntities(choice)}
         />
       ))}
-      <p style={{ fontSize: "0.95em", margin: "10px 0px" }}>{answer}</p>
+      <p className="Question__answer-prompt">{answer}</p>
       <Link to="/form">
-        <button className="play__button" style={{ display: correctShow }}>
+        <button
+          className="Question__play-button"
+          style={{ display: correctShow }}
+        >
           Get New Question
         </button>
       </Link>

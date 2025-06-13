@@ -11,6 +11,7 @@ function App() {
   const [triviaCategory, setCategory] = useState("");
   const [triviaDifficulty, setDifficulty] = useState("");
   const [triviaType, setType] = useState("");
+  const [count, setCount] = useState(0);
 
   const BASE_URL = `https://opentdb.com/api.php?amount=1&category=${triviaCategory}&difficulty=${triviaDifficulty}&type=${triviaType}`;
 
@@ -18,7 +19,7 @@ function App() {
     <div className="App.css">
       <main>
         <Router>
-          <Header />
+          <Header count={count} />
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/about" element={<About />} />
@@ -32,7 +33,12 @@ function App() {
                 />
               }
             />
-            <Route path="/question" element={<TriviaGame url={BASE_URL} />} />
+            <Route
+              path="/question"
+              element={
+                <TriviaGame url={BASE_URL} setCount={setCount} count={count} />
+              }
+            />
           </Routes>
         </Router>
       </main>

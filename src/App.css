@@ -34,7 +34,8 @@ header {
   z-index: 10;
 }
 
-.play__button {
+.play__button,
+.Question__play-button {
   border: none;
   background: black;
   padding: 15px 20px 15px 20px;
@@ -72,7 +73,19 @@ select {
   text-align: center;
 }
 
-.answer {
+.Question__category {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 10px 0px;
+}
+
+.Question__question,
+.Question__answer-prompt {
+  font-size: 0.95em;
+  margin: 10px 0px;
+}
+
+.Question__correct-answer {
   color: white;
   width: auto;
   margin: 10px 10px;
@@ -83,7 +96,7 @@ select {
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
 }
 
-.answer__choices {
+.Question__answer-choices {
   text-wrap: auto;
   display: block;
   width: auto;
@@ -122,4 +135,17 @@ iframe {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.Header__streak {
+  margin-right: 20px;
+}
+
+.Header__streak-count {
+  border: none;
+  background: black;
+  padding: 10px 15px 10px 15px;
+  color: white;
+  border-radius: 25px;
+  margin: 10px 0px;
 }

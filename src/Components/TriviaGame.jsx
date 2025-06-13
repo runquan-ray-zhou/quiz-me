@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Question from "./Question";
 
-export default function TriviaGame({ url }) {
+export default function TriviaGame({ url, setCount, count }) {
   const [trivia, setTrivia] = useState([]);
   const [questions, setQuestions] = useState([]);
 
@@ -21,7 +21,12 @@ export default function TriviaGame({ url }) {
     <div>
       <div>
         {questions.map((question, i) => (
-          <Question key={i} question={question} />
+          <Question
+            key={i}
+            question={question}
+            setCount={setCount}
+            count={count}
+          />
         ))}
       </div>
     </div>
