@@ -5,7 +5,6 @@ body {
   background-image: -webkit-linear-gradient(bottom, azure 50%, azure 50%);
   background-image: -ms-linear-gradient(bottom, azure 50%, azure 50%);
   margin: 0;
-  /* #8ECAE6 */
 }
 
 main {
@@ -95,11 +94,6 @@ select {
   border-radius: 25px;
   cursor: pointer;
   font-size: clamp(0.95em, 1vw + 0.125em, 1em);
-}
-
-.getButtons {
-  display: flex;
-  flex-direction: column;
 }
 
 .getQuestion {

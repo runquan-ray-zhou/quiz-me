@@ -32,7 +32,7 @@ function App() {
                 />
               }
             />
-            <Route path="/triviagame" element={<TriviaGame url={BASE_URL} />} />
+            <Route path="/question" element={<TriviaGame url={BASE_URL} />} />
           </Routes>
         </Router>
       </main>

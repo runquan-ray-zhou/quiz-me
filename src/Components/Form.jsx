@@ -8,7 +8,7 @@ export default function Form({ setCategory, setDifficulty, setType }) {
     setCategory(e.target.category.value);
     setDifficulty(e.target.difficulty.value);
     setType(e.target.type.value);
-    navigate("/triviagame");
+    navigate("/question");
   }
   return (
     <div className="Form">
@@ -67,14 +67,9 @@ export default function Form({ setCategory, setDifficulty, setType }) {
           </select>
         </label>
         <br />
-        <div className="getButtons">
-          <button className="getQuestion" type="submit">
-            Get Question
-          </button>
-          <button className="getQuestion" type="submit">
-            Get Random Question
-          </button>
-        </div>
+        <button className="getQuestion" type="submit">
+          Get Question
+        </button>
       </form>
     </div>
   );

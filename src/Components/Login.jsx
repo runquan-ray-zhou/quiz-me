@@ -15,7 +15,7 @@ export default function Login() {
       </div>
       <span>Quiz-Me</span>
       <Link to="/form">
-        <button className="login-button">PLAY</button>
+        <button className="login-button">Play</button>
       </Link>
     </div>
   );
