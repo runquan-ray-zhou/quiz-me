@@ -4,8 +4,14 @@ import selfPortrait from "../assets/GhibliSelfPortrait.png";
 export default function About() {
   return (
     <div className="About">
-      <img className="About__img" src={selfPortrait} alt="self portrait" />
-      <p>Quiz Me By: Runquan (Ray) Zhou</p>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://runquanrayzhou.netlify.app/"
+      >
+        <img className="About__img" src={selfPortrait} alt="self portrait" />
+      </a>
+      <p>Quiz-Me By: Runquan (Ray) Zhou</p>
       <div className="About__icons">
         <a
           target="_blank"

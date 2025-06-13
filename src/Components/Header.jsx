@@ -6,9 +6,9 @@ export default function Header() {
       <Link to="/">
         <span>Home Page</span>
       </Link>
-      {/* <Link to="/about">
+      <Link to="/about">
         <span>About</span>
-      </Link> */}
+      </Link>
     </header>
   );
 }
