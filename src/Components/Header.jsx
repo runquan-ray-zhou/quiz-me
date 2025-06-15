@@ -4,7 +4,7 @@ export default function Header({ count }) {
   return (
     <header className="Header">
       <Link to="/">
-        <span>Home Page</span>
+        <span>Home</span>
       </Link>
       <div>
         <span className="Header__streak">Streak</span>
