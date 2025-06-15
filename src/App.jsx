@@ -14,6 +14,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   const BASE_URL = `https://opentdb.com/api.php?amount=1&category=${triviaCategory}&difficulty=${triviaDifficulty}&type=${triviaType}`;
+  const RANDOM_URL = `https://opentdb.com/api.php?amount=1&category=&difficulty=&type=`;
 
   return (
     <div className="App.css">

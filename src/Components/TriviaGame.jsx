@@ -7,18 +7,19 @@ export default function TriviaGame({ url, setCount, count }) {
 
   const uberfxServerURL = "http://localhost:8080/quizme";
 
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((response) => response.results)
-      .then((response) => setTrivia([...response]))
-      .catch((error) => console.error(error));
-  }, []);
+  // useEffect(() => {
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((response) => response.results)
+  //     .then((response) => setTrivia([...response]))
+  //     .catch((error) => console.error(error));
+  // }, []);
 
   useEffect(() => {
     fetch(uberfxServerURL)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => response.results)
+      .then((response) => setTrivia([...response]))
       .catch((error) => console.error(error));
   }, []);
 
