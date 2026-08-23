@@ -42,7 +42,7 @@ export default function About() {
           <i className="fa-brands fa-linkedin"></i>
         </a>
       </div>
-      <p>All Rights Reserved 2025</p>
+      <p>All Rights Reserved 2026</p>
     </div>
   );
 }

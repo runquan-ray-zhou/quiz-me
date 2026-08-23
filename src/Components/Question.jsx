@@ -1,80 +1,116 @@
-import { useState } from "react";
+import { useMemo } from "react";
 import { Link } from "react-router-dom";
-export default function Question({ question, setCount, count }) {
-  const [answer, setAnswer] = useState("");
-  const [correctShow, setCorrectShow] = useState("none");
-  const [wrongShow, setWrongShow] = useState("none");
-  const [hide, setHide] = useState("block");
-  const [display, setDisplay] = useState("none");
 
+// Helper function to decode HTML entities (like &quot; or &#039;) from the API response
+const decodeHtmlEntities = (text) => {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = text;
+  return textarea.value;
+};
+
+// Helper function to clean up category titles (e.g., "Entertainment: Video Games" -> "Video Games")
+const formatCategory = (category) => {
+  if (category.includes(":")) {
+    return category.split(": ")[1];
+  }
+  return category;
+};
+
+export default function Question({ 
+  question, 
+  setCount, 
+  count, 
+  setStreakHistory, 
+  isCorrect, 
+  setIsCorrect, 
+  wrongChoices = [], // Default fallback array to prevent undefined errors
+  setWrongChoices, 
+  answer, 
+  setAnswer 
+}) {
   const correct = question.correct_answer;
-  const choices = question.incorrect_answers
-    .concat([question.correct_answer])
-    .sort();
 
+  // Memoize (cache) answer choices by combining incorrect and correct answers, then sorting them alphabetically
+  const choices = useMemo(() => {
+    return [...question.incorrect_answers, question.correct_answer].sort();
+  }, [question]);
+
+  // Handle user click on an answer choice button
   function handleClick(e) {
-    if (e.target.value === correct) {
-      e.target.style.color = "green";
+    const value = e.target.value;
+
+    if (value === decodeHtmlEntities(correct)) {
+      // If the answer is correct: update states, increment streak count, and append question to history
+      setIsCorrect(true);
       setAnswer("You Are Correct!");
-      setCorrectShow("block");
-      setWrongShow("none");
-      setHide("none");
-      setDisplay("block");
       setCount(count + 1);
+      setStreakHistory((prev) => [...(prev || []), question]);
     } else {
-      e.target.style.color = "white";
-      e.target.style.background = "red";
-      e.target.style.font = "bold";
-      e.target.style.border = "none";
+      // If the answer is wrong: track the choice, reset streak count, and clear streak history
+      setWrongChoices((prev) => [...(prev || []), value]);
       setAnswer("Try Again!");
-      setWrongShow("block");
       setCount(0);
+      setStreakHistory([]);
     }
-  }
-
-  function decodeHtmlEntities(text) {
-    const textarea = document.createElement("textarea");
-    textarea.innerHTML = text;
-    return textarea.value;
-  }
-
-  function formatCategory(category) {
-    if (category.includes(":")) {
-      return category.split(": ")[1];
-    }
-    return category;
   }
 
   return (
     <div className="Question">
+      {/* Display formatted trivia category */}
       <p className="Question__category">
         {formatCategory(decodeHtmlEntities(question.category))}
       </p>
+      
+      {/* Display decoded trivia question text */}
       <p className="Question__question">
         {decodeHtmlEntities(question.question)}
       </p>
-      <p className="Question__correct-answer" style={{ display: display }}>
-        {decodeHtmlEntities(correct)}
-      </p>
-      {choices.map((choice, i) => (
-        <input
-          style={{ display: hide }}
-          className="Question__answer-choices"
-          type="button"
-          key={i}
-          onClick={handleClick}
-          value={decodeHtmlEntities(choice)}
-        />
-      ))}
+
+      {/* Show the correct answer banner only after guessing correctly */}
+      {isCorrect && (
+        <p className="Question__correct-answer">
+          {decodeHtmlEntities(correct)}
+        </p>
+      )}
+
+      {/* Render answer options as buttons, disabling or styling them based on user interaction */}
+      {choices.map((choice, i) => {
+        const decodedChoice = decodeHtmlEntities(choice);
+        const isWrong = wrongChoices.includes(decodedChoice);
+
+        return (
+          <input
+            key={i}
+            className="Question__answer-choices"
+            type="button"
+            onClick={handleClick}
+            value={decodedChoice}
+            disabled={isCorrect || isWrong}
+            style={{
+              display: isCorrect ? "none" : "block",
+              ...(isWrong
+                ? {
+                    color: "white",
+                    backgroundColor: "red",
+                    border: "none",
+                  }
+                : {}),
+            }}
+          />
+        );
+      })}
+
+      {/* Show feedback prompt message ("You Are Correct!", "Try Again!") */}
       <p className="Question__answer-prompt">{answer}</p>
-      <Link to="/form">
-        <button
-          className="Question__play-button"
-          style={{ display: correctShow }}
-        >
-          Get New Question
-        </button>
-      </Link>
+
+      {/* Show 'Get New Question' link/button only after a correct answer is given */}
+      {isCorrect && (
+        <Link to="/form">
+          <button className="Question__play-button">
+            Get New Question
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

@@ -6,10 +6,16 @@ export default function Header({ count }) {
       <Link to="/">
         <span>Home</span>
       </Link>
-      <div>
-        <span className="Header__streak">Streak</span>
-        <span className="Header__streak-count">{count}</span>
-      </div>
+      
+      {/* Wrapped in a Link to navigate to the history page */}
+      <Link to="/streak-history" style={{ textDecoration: "none", color: "inherit" }}>
+        <div>
+          <span className="Header__streak">Streak</span>
+          <span className="Header__streak-count">{count}</span>
+          <span className="Header__history">History</span>
+        </div>
+      </Link>
+
       <Link to="/about">
         <span>About</span>
       </Link>
